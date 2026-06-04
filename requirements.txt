@@ -1,0 +1,5 @@
+google-adk==2.1.0
+google-adk[db]
+python-dotenv
+streamlit
+aiosqlite
