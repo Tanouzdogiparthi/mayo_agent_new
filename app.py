@@ -145,7 +145,7 @@ st.divider()
 
 donor_query = st.text_input(
     "Execute New Target Definition:", 
-    placeholder="e.g., I need a complete donor intelligence report on Tim Cook from Apple."
+    placeholder="e.g., I need a complete donor intelligence report on -name- -organization-"
 )
 
 async def execute_adk_pipeline(query: str):
@@ -214,7 +214,7 @@ if st.session_state.pipeline_results:
     with tab1:
         st.markdown(results.get("publisher", ""))
         if not results.get("publisher", ""):
-            st.info("No dossier found for this run.")
+            st.info("No Summary found for this run.")
             
     with tab2:
         st.caption("Raw JSON schema output enforcing precise Google Search boundaries.")

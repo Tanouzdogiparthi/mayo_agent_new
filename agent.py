@@ -13,9 +13,6 @@ except ImportError:
 # Load environment variables (.env secrets)
 load_dotenv()
 
-# =====================================================================
-# 1. DEFINE STREAMLINED AGENTS (Using Quota-Safe Gemini 2.5 Flash Lite)
-# =====================================================================
 
 # Step 1: The Architect (Parses unstructured input and builds queries)
 planner_agent = Agent(
@@ -39,9 +36,7 @@ publisher_agent = Agent(
     model="gemini-2.5-flash"
 )
 
-# =====================================================================
-# 2. DEFINE THE STREAMLINED GRAPH WORKFLOW
-# =====================================================================
+
 # The ADK framework automatically detects and runs the 'root_agent' graph.
 # We have flattened the pipeline into a fast, 3-step linear sequence.
 root_agent = Workflow(
